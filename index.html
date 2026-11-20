@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shlivio — launching soon</title>
+<title>shlivio · launching soon</title>
 <meta name="description" content="Shlivio is launching soon.">
-<meta property="og:title" content="Shlivio">
-<meta property="og:description" content="Shlivio is launching soon.">
+<meta name="theme-color" content="#DCE8D5">
+<meta property="og:title" content="shlivio">
+<meta property="og:description" content="Log out to Live in. Launching soon.">
 <meta property="og:url" content="https://shlivio.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://shlivio.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="shlivio logo with the tagline Log out to Live in">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf9f6;
-    --text: #1f2620;
-    --text-muted: #5b655e;
-    --accent: #4f7a5c;
+    --bg: #DCE8D5;
+    --text: #2C3B2A;
+    --text-muted: #5C6E58;
+    --gold: #C9A24B;
   }
 
   * {
@@ -30,12 +39,48 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  header {
+    padding: 32px 48px;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .logo-symbol {
+    height: 52px;
+    width: auto;
+  }
+
+  .logo-word {
+    height: 34px;
+    width: auto;
+  }
+
+  .sun {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: breathe 3.4s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50% { transform: scale(1.18); opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sun { animation: none; }
   }
 
   main {
@@ -50,37 +95,16 @@
     text-align: center;
   }
 
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    margin: 0 auto 28px;
-    animation: breathe 3.4s ease-in-out infinite;
-  }
-
-  @keyframes breathe {
-    0%, 100% { transform: scale(1); opacity: 0.55; }
-    50% { transform: scale(1.6); opacity: 1; }
-  }
-
-  .wordmark {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
+  h1.tagline {
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
     margin: 0 0 16px;
   }
 
-  p.tagline {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-muted);
-    margin: 0 0 20px;
-    letter-spacing: 0.01em;
-  }
-
   p.more {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--text-muted);
     margin: 0;
   }
@@ -88,12 +112,16 @@
   footer {
     padding: 24px;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-muted);
   }
 
   footer a {
     color: var(--text-muted);
+  }
+
+  footer a:hover {
+    color: var(--text);
   }
 
   footer .links {
@@ -103,15 +131,28 @@
   footer .links a {
     margin: 0 8px;
   }
+
+  @media (max-width: 600px) {
+    header { padding: 20px; }
+    .logo { gap: 11px; }
+    .logo-symbol { height: 42px; }
+    .logo-word { height: 27px; }
+    h1.tagline { font-size: 34px; }
+  }
 </style>
 </head>
 <body>
 
+<header>
+  <a class="logo" href="/" aria-label="shlivio home">
+    <svg class="logo-symbol" viewBox="140 99 232 314" aria-hidden="true" focusable="false"><g><rect x="148" y="135" width="84" height="270" rx="42" fill="#2C3B2A"/><rect x="280" y="215" width="84" height="190" rx="42" fill="#2C3B2A"/><circle class="sun" cx="322" cy="149" r="42" fill="#C9A24B"/></g></svg>
+    <svg class="logo-word" viewBox="-8 -8 579.0 166" aria-hidden="true" focusable="false"><path d="M60,68 C52,57 44,54 34,54 C20,54 11,62 11,74 C11,101 62,93 62,124 C62,138 50,146 34,146 C22,146 13,141 7,132" fill="none" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round"/><path d="M107.0,11.0 V139.0 M107.0,100 C107.0,70 124,56 144,56 C166,56 178,70 178,96 V139.0" fill="none" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round"/><line x1="230.0" y1="11.0" x2="230.0" y2="139.0" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round"/><line x1="272.0" y1="61.0" x2="272.0" y2="139.0" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round"/><circle cx="272.0" cy="19" r="13.0" fill="#C9A24B"/><path d="M318.0,61.0 L349.0,139.0 L380.0,61.0" fill="none" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><line x1="426.0" y1="61.0" x2="426.0" y2="139.0" stroke="#2C3B2A" stroke-width="22" stroke-linecap="round"/><circle cx="426.0" cy="19" r="13.0" fill="#2C3B2A"/><circle cx="513.0" cy="100" r="39.0" fill="none" stroke="#2C3B2A" stroke-width="22"/></svg>
+  </a>
+</header>
+
 <main>
   <div class="card">
-    <div class="dot" aria-hidden="true"></div>
-    <p class="wordmark">Shlivio</p>
-    <p class="tagline">Log out to Live in</p>
+    <h1 class="tagline">Log out to Live in</h1>
     <p class="more">More to come. Check back soon.</p>
   </div>
 </main>
